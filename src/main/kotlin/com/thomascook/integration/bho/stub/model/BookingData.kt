@@ -4,11 +4,6 @@ import org.springframework.data.annotation.CreatedDate
 import java.util.*
 import javax.persistence.*
 
-
-enum class Provider {
-    UK, NORDIC, REGIONAL
-}
-
 @Entity
 @Table(name = "BOOKING_DATA")
 data class BookingData(
@@ -37,4 +32,8 @@ data class BookingData(
         fun ukBooking(payload: String): BookingData = BookingData(provider = Provider.UK, bookingId = "1", payload = payload)
         fun regionalBooking(payload: String): BookingData = BookingData(provider = Provider.REGIONAL, bookingId = "1", payload = payload)
     }
+}
+
+enum class Provider {
+    UK, NORDIC, REGIONAL
 }
