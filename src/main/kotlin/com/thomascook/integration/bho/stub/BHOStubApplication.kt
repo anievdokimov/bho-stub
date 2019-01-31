@@ -9,7 +9,3 @@ open class BHOStubApplication
 fun main(args: Array<String>) {
     runApplication<BHOStubApplication>(*args)
 }
-
-
-
-
